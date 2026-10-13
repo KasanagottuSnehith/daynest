@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A calm place for your daily tasks, habits, and notes. Private to your browser, with no login.">
+  <title>DayNest — A little more organized</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#today"><img src="/favicon.svg" alt="" width="38" height="38"><span>DayNest<small>ROOM FOR YOUR DAY</small></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#today" data-view="today"><span aria-hidden="true">◷</span> Today</a>
+        <a href="#tasks" data-view="tasks"><span aria-hidden="true">☑</span> Tasks</a>
+        <a href="#habits" data-view="habits"><span aria-hidden="true">↗</span> Habits</a>
+        <a href="#notes" data-view="notes"><span aria-hidden="true">▤</span> Notes</a>
+        <a href="#backup" data-view="backup"><span aria-hidden="true">⇅</span> Backups</a>
+      </nav>
+      <div class="sidebar-footer"><div class="seed-icon" aria-hidden="true">✳</div><strong>Small steps. Good days.</strong><p>A little space to make life feel lighter.</p><span class="local-badge">● Stored on this browser</span></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <header class="topbar"><span id="date-label"></span><span class="topbar-note">YOUR EVERYDAY COMPANION</span></header>
+      <div id="error-banner" class="error-banner" role="alert" hidden></div>
+      <div id="view"></div>
+      <footer class="main-footer">Made for the everyday. <span>Your plans stay on this browser.</span></footer>
+    </main>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="editor" aria-labelledby="editor-title"><form id="editor-form"><div class="dialog-heading"><h2 id="editor-title"></h2><button type="button" class="icon-button" data-close aria-label="Close editor">×</button></div><div id="editor-fields"></div><div class="dialog-actions"><button type="button" class="button secondary" data-close>Cancel</button><button type="submit" class="button">Save</button></div></form></dialog>
+  <dialog id="confirmation" aria-labelledby="confirm-title"><h2 id="confirm-title"></h2><p id="confirm-message"></p><div class="dialog-actions"><button id="confirm-cancel" class="button secondary">Cancel</button><button id="confirm-ok" class="button">Confirm</button></div></dialog>
+</body>
+</html>

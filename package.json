@@ -1,0 +1,13 @@
+{
+  "name": "daynest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A calm daily planner for tasks, habits, and notes.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "check": "node --check server.js && node --check app.js && node --check model.js"
+  }
+}
